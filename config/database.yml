@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: <%= ENV['DATABASE_NAME'] || "rails_chall" %>
+  username: <%= ENV['DATABASE_USER'] || "rails_chall" %>
+  password: <%= ENV['DATABASE_PASSWORD'] || "rails_chall" %>
+  port: <%= ENV['DATABASE_PORT'] || "5432" %>
+  host: <%= ENV['DATABASE_HOST'] || "127.0.0.1" %>
+development:
+  <<: *default
+  port: 5434
+test:
+  <<: *default
+  database: rails_chall_test
+  port: 5434
+production:
+  <<: *default
+  database: rails_chall_production
+  username: rails_chall
+  password: <%= ENV['RAILS_CHALL_DATABASE_PASSWORD'] %>

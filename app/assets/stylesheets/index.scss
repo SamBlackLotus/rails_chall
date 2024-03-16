@@ -1,0 +1,35 @@
+body {
+    font: 1rem/1.5 var(--bs-font-sans-serif);
+  }
+  a {
+    color: var(--bs-red);
+  }
+
+  .card-title {
+    font-size: 30px;
+    margin: 20px;
+    vertical-align: middle;
+  }
+
+  .form-control {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    vertical-align: middle;
+    height: 50px;
+    width: 400px;
+}
+.list-group {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  vertical-align: middle;
+  height: 50px;
+  width: 400px;
+}
+
+.btn {
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
